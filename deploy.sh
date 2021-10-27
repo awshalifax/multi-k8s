@@ -12,6 +12,6 @@ docker push awshalifax/worker:latest
 docker push awshalifax/worker:$GIT_SHA
 
 kubectl apply -f k8s/
-kubectl set image deployments/client-deployment server=awshalifax/client:$GIT_SHA
+kubectl set image deployments/client-deployment client=awshalifax/client:$GIT_SHA
 kubectl set image deployments/server-deployment server=awshalifax/server:$GIT_SHA
-kubectl set image deployments/worker-deployment server=awshalifax/worker:$GIT_SHA
+kubectl set image deployments/worker-deployment worker=awshalifax/worker:$GIT_SHA
